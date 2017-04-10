@@ -8,23 +8,22 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 require_once SourceTheme\ABSPATH . 'class-core-init.php';
-
-use SourceTheme\Core\Core_Init;
+require_once SourceTheme\ABSPATH . 'class-setup.php';
 
 /**
  * Triggered when the theme is changed.
  * @since         1.0.0
  */
-add_action( 'after_switch_theme', array( Core_Init::get_instance(), 'after_switch_theme' ) );
+add_action( 'after_switch_theme', [ 'SourceTheme\Core\Setup', 'after_switch_theme' ] );
 
 /**
  * Triggered on the request immediately following a theme switch.
  * @since         1.0.0
  */
-add_action( 'switch_theme', array( Core_Init::get_instance(), 'switch_theme' ) );
+add_action( 'switch_theme', [ 'SourceTheme\Core\Setup', 'switch_theme' ] );
 
 /**
  * This hook is called during each page load, after the theme is initialized.
  * @since         1.0.0
  */
-add_action( 'after_setup_theme', array( Core_Init::get_instance(), 'after_setup_theme' ) );
+add_action( 'after_setup_theme', [ 'SourceTheme\Core\Setup', 'after_setup_theme' ] );
