@@ -6,6 +6,8 @@ if ( !defined( 'ABSPATH' ) ) {
   die( 'Direct access is forbidden.' );
 }
 
+use SourceFramework\Template\Microdata;
+
 /**
  * This is the template that displays all of the <footer> section and everything after main content
  *
@@ -18,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 ?>
 
-    <footer id="site-footer">
+    <footer id="site-footer" <?php Microdata::web_page_footer() ?>>
 
     </footer>
 

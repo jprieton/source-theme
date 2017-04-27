@@ -6,6 +6,8 @@ if ( !defined( 'ABSPATH' ) ) {
   die( 'Direct access is forbidden.' );
 }
 
+use SourceFramework\Template\Microdata;
+
 /**
  * This is the template that displays all of the <head> section and everything before main content
  *
@@ -26,7 +28,8 @@ if ( !defined( 'ABSPATH' ) ) {
 
     <?php wp_head() ?>
 
-    <!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <noscript>
@@ -38,7 +41,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
   </head>
 
-  <body <?php body_class() ?>>
+  <body <?php body_class() ?> <?php Microdata::body() ?>>
 
     <?php
     /**
@@ -48,6 +51,6 @@ if ( !defined( 'ABSPATH' ) ) {
     do_action( 'before_main_content' );
     ?>
 
-    <header id="#site-header">
+    <header id="#site-header" <?php Microdata::web_page_header() ?>>
 
     </header>
