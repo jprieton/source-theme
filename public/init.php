@@ -7,54 +7,30 @@ if ( !defined( 'ABSPATH' ) ) {
   die( 'Direct access is forbidden.' );
 }
 
-require_once SourceFramework\ABSPATH . '/public/class-public-init.php';
-require_once SourceFramework\ABSPATH . '/includes/general-template.php';
-require_once SourceFramework\ABSPATH . '/includes/shortcodes.php';
-require_once SourceFramework\ABSPATH . '/includes/user.php';
-require_once SourceFramework\ABSPATH . '/bootstrap/init.php';
+use SourceTheme\Core\PublicInit;
 
-add_action( 'wp_enqueue_scripts', function() {
-  $init = SourceFramework\Core\Public_Init::get_instance();
+require_once SourceTheme\ABSPATH . '/public/class-public-init.php';
+require_once SourceTheme\ABSPATH . '/includes/general-template.php';
 
-  /**
-   * Register and enqueue plugin scripts
-   * @since 1.0.0
-   */
-  $init->enqueue_scripts();
-
-  /**
-   * Register and enqueue plugin styles
-   * @since 1.0.0
-   */
-  $init->enqueue_styles();
+/**
+ * Add Bootstrap scripts
+ *
+ * @since 1.0.0
+ */
+add_filter( 'source_framework_public_enqueue_scripts', function($scripts) {
+  $init    = PublicInit::get_instance();
+  $scripts = $init->enqueue_scripts( $scripts );
+  return $scripts;
 } );
 
-add_action( 'wp_head', function () {
-  $init = SourceFramework\Core\Public_Init::get_instance();
-
-  /**
-   * Shows a custom code in header of the singular template
-   * @since 1.0.0
-   */
-  $init->singular_custom_code_header_script();
+/**
+ * Add Bootstrap styles
+ *
+ * @since 1.0.0
+ */
+add_filter( 'source_framework_public_enqueue_styles', function($styles) {
+  $init   = PublicInit::get_instance();
+  $styles = $init->enqueue_styles( $styles );
+  return $styles;
 } );
 
-add_action( 'wp_body', function () {
-  $init = SourceFramework\Core\Public_Init::get_instance();
-
-  /**
-   * Shows a custom code in footer of the singular template
-   * @since 1.0.0
-   */
-  $init->singular_custom_code_body_script();
-} );
-
-add_action( 'wp_footer', function () {
-  $init = SourceFramework\Core\Public_Init::get_instance();
-
-  /**
-   * Shows a custom code in footer of the singular template
-   * @since 1.0.0
-   */
-  $init->singular_custom_code_footer_script();
-} );
