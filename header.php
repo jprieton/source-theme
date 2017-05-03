@@ -41,7 +41,7 @@ use SourceFramework\Template\Microdata;
 
   </head>
 
-  <body <?php body_class() ?> <?php Microdata::body() ?>>
+  <body <?php body_class() ?> <?php Microdata::web_page() ?>>
 
     <?php
     /**
