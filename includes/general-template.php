@@ -31,14 +31,15 @@ function bootstrap_paginate_links( $args = [] ) {
       "<li><span class='page-numbers current'>"
   ];
   $replace  = [
-      "<ul class='page-numbers pagination'>",
-      "<li class='active'><span class='page-numbers current'>"
+      '<ul class="page-numbers pagination">',
+      '<li class="active"><span class="page-numbers current">'
   ];
   $paginate = str_replace( $search, $replace, $paginate );
 
   $attributes = [
       'itemscope',
-      'itemtype' => 'http://schema.org/SiteNavigationElement'
+      'itemtype' => 'http://schema.org/SiteNavigationElement',
+      'role'     => 'navigation'
   ];
 
   $tag        = Tag::get_instance();
