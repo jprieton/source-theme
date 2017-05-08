@@ -1,13 +1,13 @@
 <?php
 
 if ( file_exists( 'source-theme.phar' ) ) {
-  unlink( 'source-framework.phar' );
+  unlink( 'source-theme.phar' );
 }
 
 $phar = new Phar( 'source-theme.phar' );
 $phar->setStub( '<?php __HALT_COMPILER();' );
 
-$folders = [ 'admin', 'core' ];
+$folders = [ 'Init' ];
 
 foreach ( $folders as $folder ) {
   $files = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $folder ), RecursiveIteratorIterator::SELF_FIRST );
@@ -19,4 +19,5 @@ foreach ( $folders as $folder ) {
     }
   }
 }
+
 $phar->compressFiles( Phar::GZ );

@@ -51,6 +51,6 @@ use SourceFramework\Template\Microdata;
     do_action( 'before_main_content' );
     ?>
 
-    <header id="#site-header" <?php Microdata::web_page_header() ?>>
+    <header id="#site-header">
 
     </header>
