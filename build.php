@@ -7,7 +7,7 @@ if ( file_exists( 'source-theme.phar' ) ) {
 $phar = new Phar( 'source-theme.phar' );
 $phar->setStub( '<?php __HALT_COMPILER();' );
 
-$folders = [ 'Init' ];
+$folders = [ 'Init', 'Template' ];
 
 foreach ( $folders as $folder ) {
   $files = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $folder ), RecursiveIteratorIterator::SELF_FIRST );

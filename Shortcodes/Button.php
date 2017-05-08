@@ -12,44 +12,42 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Description of Button
  *
- * @author perseo
+ * @package        Template
+ * @since          1.0.0
+ * @author         Javier Prieto <jprieton@gmail.com>
  */
 class Button {
 
-  public function __construct() {
+  public static function btn( $type, $content, $attributes = [] ) {
     
   }
 
-  public static function btn() {
-
-  }
-
   public static function btn_default() {
-
+    
   }
 
   public static function btn_primary() {
-
+    
   }
 
   public static function btn_success() {
-
+    
   }
 
   public static function btn_info() {
-
+    
   }
 
   public static function btn_warning() {
-
+    
   }
 
   public static function btn_danger() {
-
+    
   }
 
   public static function btn_link() {
-
+    
   }
 
 }
