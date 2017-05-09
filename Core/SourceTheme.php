@@ -1,0 +1,80 @@
+<?php
+
+namespace SourceTheme\Core;
+
+/**
+ * If this file is called directly, abort.
+ */
+if ( !defined( 'ABSPATH' ) ) {
+  die( 'Direct access is forbidden.' );
+}
+
+use SourceFramework\Abstracts\Singleton;
+
+/**
+ * SourceTheme class
+ *
+ * @package     SourceTheme
+ * @subpackage  Core
+ *
+ * @author      Javier Prieto <jprieton@gmail.com>
+ * @copyright	  Copyright (c) 2017, Javier Prieto
+ * @since       1.0.0
+ * @license     http://www.gnu.org/licenses/gpl-3.0.txt
+ */
+class SourceTheme extends Singleton {
+
+  /**
+   * Static instance of this class
+   *
+   * @since         1.0.0
+   * @var           SourceTheme
+   */
+  protected static $instance;
+
+  /**
+   * Declared as protected to prevent creating a new instance outside of the class via the new operator.
+   *
+   * @since         1.0.0
+   */
+  protected function __construct() {
+    parent::__construct();
+    /**
+     * Enable theme suports
+     * @since 1.0.0
+     */
+    add_action( 'init', [ $this, 'theme_supports' ] );
+  }
+
+  /**
+   * Enable theme suports
+   *
+   * @since 1.0.0
+   */
+  public function theme_supports() {
+    /**
+     * Enables Post Formats support for a theme.
+     * @since 1.0.0
+     */
+    add_theme_support( 'post-formats' );
+
+    /**
+     * This feature enables Post Thumbnails support for a theme.
+     * @since 1.0.0
+     */
+    add_theme_support( 'post-thumbnails' );
+
+    /**
+     * Enables plugins and themes to manage the document title tag.
+     * @since 1.0.0
+     */
+    add_theme_support( 'title-tag' );
+
+    /**
+     * enables Automatic Feed Links for post and comment in the head.
+     * @since 1.0.0
+     */
+    add_theme_support( 'automatic-feed-links' );
+  }
+
+}

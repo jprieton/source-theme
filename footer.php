@@ -20,10 +20,6 @@ use SourceFramework\Template\Microdata;
  */
 ?>
 
-    <footer id="site-footer" <?php Microdata::web_page_footer() ?>>
-
-    </footer>
-
     <?php
     wp_footer();
 

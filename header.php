@@ -41,7 +41,7 @@ use SourceFramework\Template\Microdata;
 
   </head>
 
-  <body <?php body_class() ?> <?php Microdata::web_page() ?>>
+  <body <?php body_class() ?> <?php echo Microdata::web_page() ?>>
 
     <?php
     /**
@@ -50,7 +50,3 @@ use SourceFramework\Template\Microdata;
      */
     do_action( 'before_main_content' );
     ?>
-
-    <header id="#site-header">
-
-    </header>
