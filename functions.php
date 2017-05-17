@@ -17,7 +17,7 @@ if ( file_exists( __DIR__ . DIRECTORY_SEPARATOR . 'source-theme.phar' ) ) {
   define( 'SourceTheme\ABSPATH', __DIR__ . DIRECTORY_SEPARATOR );
 }
 define( 'SourceTheme\VERSION', '1.0.0' );
-define( 'SourceTheme\TEXDOMAIN', 'source-theme' );
+define( 'SourceTheme\TEXTDOMAIN', 'source-theme' );
 
 /**
  * Registering an autoload implementation
