@@ -39,5 +39,6 @@ spl_autoload_register( function($class_name) {
   }
 } );
 
-
-// require_once SourceTheme\ABSPATH . '/core/init.php';
+/**
+ * Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues.
+ */
