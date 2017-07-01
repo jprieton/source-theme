@@ -39,6 +39,14 @@ use SourceFramework\Template\Microdata;
       </noscript>
     <![endif]-->
 
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
   </head>
 
   <body <?php body_class() ?> <?php echo Microdata::web_page() ?>>
