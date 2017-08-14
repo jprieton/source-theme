@@ -11,13 +11,20 @@ if ( !defined( 'ABSPATH' ) ) {
  * Define plugin constants
  * @since 1.0.0
  */
-if ( file_exists( __DIR__ . DIRECTORY_SEPARATOR . 'source-theme.phar' ) ) {
-  define( 'SourceTheme\ABSPATH', 'phar://' . __DIR__ . DIRECTORY_SEPARATOR . 'source-theme.phar' );
-} else {
-  define( 'SourceTheme\ABSPATH', __DIR__ . DIRECTORY_SEPARATOR );
-}
 define( 'SourceTheme\VERSION', '1.0.0' );
+define( 'SourceTheme\PLUGIN_FILE', __FILE__ );
+define( 'SourceTheme\BASENAME', plugin_basename( __FILE__ ) );
 define( 'SourceTheme\TEXTDOMAIN', 'source-theme' );
+
+/**
+ * Path to the plugin directory or phar package
+ * @since 1.0.0
+ */
+if ( file_exists( plugin_dir_path( SourceTheme\PLUGIN_FILE ) . 'source-framework.phar' ) ) {
+  define( 'SourceTheme\ABSPATH', 'phar://' . plugin_dir_path( SourceTheme\PLUGIN_FILE ) . 'source-framework.phar' );
+} else {
+  define( 'SourceTheme\ABSPATH', plugin_dir_path( SourceTheme\PLUGIN_FILE ) );
+}
 
 /**
  * Registering an autoload implementation
@@ -38,6 +45,24 @@ spl_autoload_register( function($class_name) {
     include $filename;
   }
 } );
+
+/**
+ * Initialize SourceTheme
+ * @since 1.0.0
+ */
+SourceTheme\Core\Init::get_instance();
+
+/**
+ * Initialize Script API
+ * @since 1.0.0
+ */
+SourceTheme\Core\Script::get_instance();
+
+/**
+ * Initialize Style API
+ * @since 1.0.0
+ */
+SourceTheme\Core\Style::get_instance();
 
 /**
  * Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues.
