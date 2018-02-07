@@ -24,7 +24,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Not Found</title>
+    <title><?php _e( 'Page Not Found', SourceTheme\TEXTDOMAIN ) ?></title>
     <style>
 
       * {
@@ -86,17 +86,7 @@ if ( !defined( 'ABSPATH' ) ) {
   </head>
 
   <body <?php body_class() ?>>
-
-    <?php
-    /**
-     * This hook is called before the main content is rendered
-     * @since 1.0.0
-     */
-    do_action( 'before_main_content' );
-    ?>
-
     <h1><?php _e( 'Page Not Found', SourceTheme\TEXTDOMAIN ) ?></h1>
     <p><?php _e( 'Sorry, but the page you were trying to view does not exist.', SourceTheme\TEXTDOMAIN ) ?></p>
   </body>
 </html>
-<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
