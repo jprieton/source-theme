@@ -24,7 +24,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php _e( 'Page Not Found', SourceTheme\TEXTDOMAIN ) ?></title>
+    <title><?php _e( 'Page Not Found', ST_TEXTDOMAIN ) ?></title>
     <style>
 
       * {
@@ -83,10 +83,18 @@ if ( !defined( 'ABSPATH' ) ) {
       </noscript>
     <![endif]-->
 
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
   </head>
 
   <body <?php body_class() ?>>
-    <h1><?php _e( 'Page Not Found', SourceTheme\TEXTDOMAIN ) ?></h1>
-    <p><?php _e( 'Sorry, but the page you were trying to view does not exist.', SourceTheme\TEXTDOMAIN ) ?></p>
+    <h1><?php _e( 'Page Not Found', ST_TEXTDOMAIN ) ?></h1>
+    <p><?php _e( 'Sorry, but the page you were trying to view does not exist.', ST_TEXTDOMAIN ) ?></p>
   </body>
 </html>

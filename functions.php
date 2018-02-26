@@ -11,10 +11,10 @@ if ( !defined( 'ABSPATH' ) ) {
  * Define plugin constants
  * @since 1.0.0
  */
-define( 'SourceTheme\VERSION', '1.0.0' );
+define( 'ST_VERSION', '2.0.0' );
 define( 'SourceTheme\PLUGIN_FILE', __FILE__ );
 define( 'SourceTheme\BASENAME', plugin_basename( __FILE__ ) );
-define( 'SourceTheme\TEXTDOMAIN', 'source-theme' );
+define( 'ST_TEXTDOMAIN', 'source-theme' );
 
 /**
  * Path to the plugin directory or phar package

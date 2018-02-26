@@ -60,18 +60,6 @@ final class Init extends Singleton {
     add_theme_support( 'post-formats' );
 
     /**
-     * This feature enables Post Thumbnails support for a theme.
-     * @since 1.0.0
-     */
-    add_theme_support( 'post-thumbnails' );
-
-    /**
-     * Enables plugins and themes to manage the document title tag.
-     * @since 1.0.0
-     */
-    add_theme_support( 'title-tag' );
-
-    /**
      * enables Automatic Feed Links for post and comment in the head.
      * @since 1.0.0
      */
