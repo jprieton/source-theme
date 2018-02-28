@@ -17,7 +17,7 @@ use SourceFramework\Abstracts\Singleton;
  * @package     SourceTheme
  * @subpackage  Core
  *
- * @author      Javier Prieto <jprieton@gmail.com>
+ * @author      Javier Prieto
  * @copyright	  Copyright (c) 2017, Javier Prieto
  * @since       1.0.0
  * @license     http://www.gnu.org/licenses/gpl-3.0.txt
@@ -60,7 +60,7 @@ final class Init extends Singleton {
     add_theme_support( 'post-formats' );
 
     /**
-     * enables Automatic Feed Links for post and comment in the head.
+     * Enables Automatic Feed Links for post and comment in the head.
      * @since 1.0.0
      */
     add_theme_support( 'automatic-feed-links' );

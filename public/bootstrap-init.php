@@ -15,7 +15,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * @package        Init
  * @subpackage     Public
  * @since          1.0.0
- * @author         Javier Prieto <jprieton@gmail.com>
+ * @author         Javier Prieto
  */
 final class Public_Init {
 

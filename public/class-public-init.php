@@ -17,7 +17,7 @@ use SourceFramework\Abstracts\Singleton;
  * @package        Core
  * @subpackage     Init
  * @since          1.0.0
- * @author         Javier Prieto <jprieton@gmail.com>
+ * @author         Javier Prieto
  */
 class PublicInit extends Singleton {
 

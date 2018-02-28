@@ -1,7 +1,6 @@
 <?php
-/**
- * If this file is called directly, abort.
- */
+
+// If this file is called directly, abort.
 if ( !defined( 'ABSPATH' ) ) {
   die( 'Direct access is forbidden.' );
 }
@@ -13,8 +12,7 @@ use SourceFramework\Template\Microdata;
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package     WordPress
- * @subpackage  SourceTheme
+ * @package     SourceTheme
  * @since       1.0.0
  * @version     1.0.0
  */
@@ -25,6 +23,7 @@ use SourceFramework\Template\Microdata;
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <?php wp_head() ?>
 

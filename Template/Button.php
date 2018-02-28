@@ -14,7 +14,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @package        Template
  * @since          1.0.0
- * @author         Javier Prieto <jprieton@gmail.com>
+ * @author         Javier Prieto
  */
 class Button {
 

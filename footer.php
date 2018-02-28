@@ -10,8 +10,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package     WordPress
- * @subpackage  SourceTheme
+ * @package     SourceTheme
  * @since       1.0.0
  * @version     1.0.0
  */

@@ -1,7 +1,6 @@
 <?php
-/**
- * If this file is called directly, abort.
- */
+
+// If this file is called directly, abort.
 if ( !defined( 'ABSPATH' ) ) {
   die( 'Direct access is forbidden.' );
 }
@@ -12,8 +11,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/src/404.html
  *
- * @package     WordPress
- * @subpackage  SourceTheme
+ * @package     SourceTheme
  * @since       1.0.0
  * @version     1.0.0
  */

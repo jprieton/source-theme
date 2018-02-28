@@ -17,7 +17,7 @@ use SourceFramework\Abstracts\Singleton;
  * @package     SourceTheme
  * @subpackage  Core
  *
- * @author      Javier Prieto <jprieton@gmail.com>
+ * @author      Javier Prieto
  * @copyright	  Copyright (c) 2017, Javier Prieto
  * @since       1.0.0
  * @license     http://www.gnu.org/licenses/gpl-3.0.txt
