@@ -1,0 +1,36 @@
+{
+  "name": "source-theme",
+  "version": "1.0.0",
+  "description": "An extensible theme based in Source Framework",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprieton/source-theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "source-framework",
+    "bootstrap"
+  ],
+  "author": "Javier Prieto",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jprieton/source-theme/issues"
+  },
+  "homepage": "https://github.com/jprieton/source-theme#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "bootstrap": "^4.1.0",
+    "hover.css": "^2.3.2",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.3.0"
+  }
+}
